@@ -956,6 +956,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	font-size: 15px;
 	color: #FFFFFF;
 }
+
+.skill-bars .progress{
+	display: initial;
+}
+
+.skill-bars .progressbar-text{
+	margin: -34px;
+	text-align: center;
+}
+
 .skill-bars li strong {
 	position: absolute;
 	left: 0;
@@ -966,34 +976,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	font-size: 1.5rem;
 	line-height: 2.4rem;
 }
-.skill-bars li .progress {
-	border-radius: 10px;
-	position: relative;
-	height: 100%;
-	text-align: center;
-    line-height: 1.3;
-}
-
-.skill-bars li .percentP {
-	width: 85%;
-	background: #1b9d55;
-}
-
-.skill-bars li .percentI {
-	width: 75%;
-	background: #298dd4;
-}
-
-.skill-bars li .percentS {
-	width: 65%;
-	background: #c1d429;
-}
-
-.skill-bars li .percentB {
-	width: 50%;
-	background: #ef4f4f;
-}
-
 
 /**
  * ===================================================================

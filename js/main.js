@@ -64,6 +64,122 @@
 	});
 
 
+    /*Progress Bar Setting*/
+    var proficientLine = {
+        strokeWidth: 10,
+        easing: 'easeInOut',
+        duration: 2500,
+        trailColor: '#a1a1a1',
+        trailWidth: 1,
+        from: {color: '#ef4f4f'},
+        to: {color: '#1b9d55'},
+        text: {
+            style: {
+                color: '#FFFFFF',
+            },
+            autoStyleContainer: false
+        },
+        svgStyle: {
+            width: '85%',
+            height: '100%',
+            'border-radius': '10px'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+            bar.setText('Proficient');
+        }
+    };
+
+    var intermediateLine = {
+        strokeWidth: 10,
+        easing: 'easeInOut',
+        duration: 3500,
+        trailColor: '#a1a1a1',
+        trailWidth: 1,
+        from: {color: '#ef4f4f'},
+        to: {color: '#298dd4'},
+        text: {
+            style: {
+                color: '#FFFFFF',
+            },
+            autoStyleContainer: false
+        },
+        svgStyle: {
+            width: '75%',
+            height: '100%',
+            'border-radius': '10px'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+            bar.setText('Intermediate');
+        }
+    };
+
+    var skilledLine = {
+        strokeWidth: 10,
+        easing: 'easeInOut',
+        duration: 4500,
+        trailColor: '#a1a1a1',
+        trailWidth: 1,
+        from: {color: '#ef4f4f'},
+        to: {color: '#c1d429'},
+        text: {
+            style: {
+                color: '#FFFFFF',
+            },
+            autoStyleContainer: false
+        },
+        svgStyle: {
+            width: '65%',
+            height: '100%',
+            'border-radius': '10px'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+            bar.setText('Skilled');
+        }
+    };
+
+    var efficientedLine = {
+        strokeWidth: 10,
+        easing: 'easeInOut',
+        duration: 5500,
+        trailColor: '#a1a1a1',
+        trailWidth: 1,
+        from: {color: '#ef4f4f'},
+        to: {color: '#ef4f4f'},
+        text: {
+            style: {
+                color: '#FFFFFF',
+            },
+            autoStyleContainer: false
+        },
+        svgStyle: {
+            width: '55%',
+            height: '100%',
+            'border-radius': '10px'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+            bar.setText('Efficiented');
+        }
+    };
+    var phpLine = new ProgressBar.Line('#phpProgress', proficientLine),
+        jsLine = new ProgressBar.Line('#jsProgress', proficientLine),
+        sqlLine = new ProgressBar.Line('#sqlProgress', proficientLine),
+        cLine = new ProgressBar.Line('#cProgress', intermediateLine),
+        dockerLine = new ProgressBar.Line('#dockerProgress', intermediateLine),
+        goLine = new ProgressBar.Line('#goProgress', skilledLine),
+        pythonLine = new ProgressBar.Line('#pythonProgress', efficientedLine);
+
+    phpLine.animate(1);
+    jsLine.animate(1);
+    sqlLine.animate(1);
+    cLine.animate(1);
+    dockerLine.animate(1);
+    goLine.animate(1);
+    pythonLine.animate(1);
+
 	/*----------------------------------------------------- */
 	/* Stat Counter
   	------------------------------------------------------- */
